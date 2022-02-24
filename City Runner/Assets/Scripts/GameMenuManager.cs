@@ -43,7 +43,7 @@ public class GameMenuManager : MonoBehaviour
     void Start()
     {
         StartGamePanel.SetActive(true);
-        FindObjectOfType<PlayerHealthManager>().PlayerStateAction   +=  PlayeGameState;
+        FindObjectOfType<PlayerDataManager>().PlayerStateAction   +=  PlayeGameState;
     }
 
     // When player life decreases by one when player hits any obstacle.  then update the life text

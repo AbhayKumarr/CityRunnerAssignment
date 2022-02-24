@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PlayerHealthManager : MonoBehaviour
+public class PlayerDataManager : MonoBehaviour
 {
     // [SerializeField] CharacterMover characterMoveScript;
     [SerializeField] int playerHealth = 3;

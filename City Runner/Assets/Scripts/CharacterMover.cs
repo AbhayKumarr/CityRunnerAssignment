@@ -59,7 +59,7 @@ public class CharacterMover : MonoBehaviour
         ChangePlayerState(PlayerStates.Idle);
 
         // Subscribing player state actoin change 
-        FindObjectOfType<PlayerHealthManager>().PlayerStateAction += ChangePlayerState;
+        FindObjectOfType<PlayerDataManager>().PlayerStateAction += ChangePlayerState;
     
         // Getting Starting positoin of player to track it's overall distance
         startingPosOfPlayer = transform.position.z;
