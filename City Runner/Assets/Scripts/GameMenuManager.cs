@@ -102,7 +102,7 @@ public class GameMenuManager : MonoBehaviour
         // updating time taken text on ui
         foreach(var item in timetakenText)
             if(item != null)
-                item.text = "Time Taken :"+ timeTaken.ToString("0.00") +" seconds.";
+                item.text = "Time Taken :"+ timeTaken.ToString("0.0") +" seconds.";
 
     }
 

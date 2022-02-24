@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoadSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject[] roadPrefabs;
+    // [SerializeField] GameObject[] roadPrefabs;
     [SerializeField] Transform startPoint;
     // Start is called before the first frame update
 
@@ -23,9 +23,9 @@ public class RoadSpawner : MonoBehaviour
 
     public void SpawnNewRoad()
     {
-            GameObject randomPrefab = roadPrefabs[Random.Range(0, roadPrefabs.Length)];
-            GameObject roadObject =  Instantiate(randomPrefab, startPoint.position, startPoint.rotation);
-
+            // GameObject randomPrefab = roadPrefabs[Random.Range(0, roadPrefabs.Length)];
+            // GameObject roadObject =  Instantiate(randomPrefab, startPoint.position, startPoint.rotation);
+            GameObject roadObject = ObjectPooler.Instance.SpawnFromPool("road_1", startPoint.position, startPoint.rotation);
             startPoint = roadObject.GetComponent<RoadElement>().GetEndPoint();
     }
 
